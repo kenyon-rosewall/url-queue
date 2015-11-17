@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	
+	"name": "URL Queue",
+	"version": "1.0",
+	"description": "Add URLs to a queue to get to later",
+	
+	"permissions": ["http://*/*","https://*/*","contextMenus","storage","unlimitedStorage","tabs"],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"icons": {
+		"16": "icon-16.png"
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "queue.html"
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"windows": "Ctrl+Shift+U",
+				"mac": "Command+Shift+U"
+			}
+		},
+		"add_page": {
+			"suggested_key": {
+				"windows": "Ctrl+Shift+A",
+				"mac": "Command+Shift+A"
+			},
+			"description": "Add a page to the queue"
+		}
+	}
+}
